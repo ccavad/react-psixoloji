@@ -1,0 +1,11 @@
+::root {
+  --primary-color: #246FB2
+}
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+}
