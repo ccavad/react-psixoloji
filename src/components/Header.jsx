@@ -8,26 +8,27 @@ function Header() {
   return (
     <header>
       <div className="header__logo">
-        <Link to={<Home />}>
+        asd
+        <Link to={"../pages/Home.jsx"}>
           <img src="../../public/assets/logo.png" alt="logo psychology" />
         </Link>
       </div>
       <div className="header__right">
         <div className="header__top">
           <ul className="header__social">
-            {socialLinks.map(link => {
-              <li>
+            {socialLinks.map((link, ind) => {
+              return (<li key={ind}>
                 <a href="#">
                   <img src={`../../public/assets/${link}.png`} alt="socialmedia logo" />
                 </a>
-              </li>
+              </li>)
             })}
           </ul>
-          <Link to={<Login />}>Giriş et</Link>
+          <Link to={"../pages/Login.jsx"}>Giriş et</Link>
         </div>
         <div className="header__bottom">
           <ul className="header__nav">
-            <li><Link></Link></li>
+            {/* <li><Link></Link></li> */}
           </ul>
         </div>
       </div>
