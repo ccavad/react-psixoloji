@@ -17,6 +17,8 @@ body {
 
 ul, li {
   list-style-type: none;
+  margin: 0;
+  padding: 0
 }
 
 a {
@@ -27,7 +29,7 @@ a {
 
 header {
   display: flex;
-  padding: 1rem;
+  padding: 0 1rem;
   height: 120px;
   align-items: center;
   overflow: hidden;
@@ -47,6 +49,7 @@ header ul {
   display: flex;
   flex-direction: column;
   height: 100%;
+  justify-content: space-around;
 }
 
 .header__top {
@@ -96,13 +99,34 @@ header .header__nav{
   display: block
 }
 
+/* Footer component  */
+
+footer {
+  background-color: #FAFAFA;
+  padding: 1rem;
+}
+
+.footer__top {
+  display: grid;
+  grid-template-columns: 1fr 3fr;
+  align-items: center;
+}
+
+.footer__nav {
+  display: flex;
+  gap: 4rem
+}
+
 /* Media queries  */
 
 @media (min-width: 768px) {
   header {
-    padding: 1rem 6%;
+    padding: 0 6%;
   }
   .header__hamburger {
     display: none
+  }
+  footer {
+    padding: 3rem 6%;
   }
 }

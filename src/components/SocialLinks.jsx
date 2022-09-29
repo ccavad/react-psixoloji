@@ -1,13 +1,14 @@
 import React from 'react'
+import { nanoid } from 'nanoid';
 
 function SocialLinks() {
   const socialLinks = ["fb", "ln", "tw", "ig", "yt"];
 
   return (
     <>
-      {socialLinks.map((link, ind) => {
+      {socialLinks.map((link) => {
         return (
-          <li key={ind}>
+          <li key={nanoid()}>
             <a href="#">
               <img
                 src={`../../public/assets/${link}.png`}

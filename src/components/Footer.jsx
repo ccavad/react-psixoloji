@@ -5,10 +5,14 @@ import { Link } from 'react-router-dom';
 function Footer() {
   return (
     <footer>
-      <div className="footer-top">
+      <div className="footer__top">
         <div className="footer__logo">
-          <img src="../../public/assets/logo.png" alt="logo" />
-          <SocialLinks/>
+          <Link to="/">
+            <img src="../../public/assets/logo.png" alt="logo" />
+          </Link>
+          <ul className="footer__social">
+            <SocialLinks/>
+          </ul>
         </div>
         <div className="footer__nav">
           <ul>
@@ -29,7 +33,7 @@ function Footer() {
           </ul>
         </div>
       </div>
-      <div className="footer-bottom">
+      <div className="footer__bottom">
         <p>Copyright Proton.az</p>
         <div>
           <a href="tel:+0553334503">055 333 45 03</a>
