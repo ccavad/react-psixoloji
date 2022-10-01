@@ -8,6 +8,8 @@
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0
 }
 
 body {
@@ -145,6 +147,7 @@ footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  padding-top: 1.5rem
 }
 
 .footer__bottom div {
@@ -188,6 +191,7 @@ footer {
   color: white;
   border-radius: 5px;
   padding: 1rem 2rem;
+  margin-top: 2rem
 }
 
 .home__s1--img {
@@ -262,6 +266,7 @@ footer {
   text-align: center;
   display: flex;
   justify-content: center;
+  align-items: center;
 }
 
 .home__s3 div {
@@ -286,7 +291,6 @@ footer {
 
 .home__s3--link:hover {
   color: var(--primary-color);
-  border: 1px solid white;
   background-color: white
 }
 
@@ -294,6 +298,7 @@ footer {
   padding: 3rem 6%;
   display: flex;
   flex-direction: column;
+  gap: 1rem
 }
 
 .home4__top {
@@ -303,7 +308,27 @@ footer {
 }
 
 .home4__top div {
-  position: relative
+  position: relative;
+  padding-left: 1rem;
+}
+
+.home4__top h3, .home4__top p {
+  margin: 0;
+  padding: 0
+}
+
+.home4__top a {
+  background-color: transparent;
+  color: #F8A80D;
+  border: 1px solid #F8A80D;
+  border-radius: 5px;
+  padding: 1rem 2.5rem;
+  transition: .2s
+}
+
+.home4__top a:hover {
+  background-color: #F8A80D;
+  color: white
 }
 
 .home4__top div::after {
@@ -312,8 +337,104 @@ footer {
   width: 5px;
   height: 100%;
   background-color: var(--primary-color);
-
+  top: 0;
+  left: 0;
 }
+
+.home4__middle {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+.home4__middle .grid-item {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start
+}
+
+.home4__middle .grid-item h4 {
+  color: var(--dark-gray);
+  font-size: 18px;
+}
+
+.home4__middle .grid-item p {
+  color: var(--dark-gray);
+  font-size: 14px;
+  width: 90%
+}
+
+.home4__middle .grid-item a {
+  background-color: white;
+  color: var(--primary-color);
+  border: 1px solid var(--primary-color);
+  border-radius: 5px;
+  padding: .8rem 2.7rem;
+}
+
+.home4__middle .grid-item:nth-of-type(1) a {
+  background-color: var(--primary-color);
+  color: white;
+}
+
+/* About component  */
+
+.aboutsec {
+  padding: 3rem 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  position: relative; 
+}
+
+.aboutsec-2 p {
+  width: 50%;
+  float: right
+}
+
+.aboutsec-3 p {
+  width: 50%;
+  float: left;
+}
+
+/* Breadcrumb component  */
+
+.breadcrumb {
+  position: relative;
+  padding-left: 1.5rem;
+}
+
+.breadcrumb h3 {
+  color: var(--dark-gray);
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.breadcrumb-link {
+  display: flex;
+  gap: .5rem;
+}
+
+.breadcrumb-link,
+.breadcrumb a {
+  color: #838383;
+  font-size: .9rem;
+}
+
+.breadcrumb::after {
+  content: "";
+  width: 5px;
+  height: 100%;
+  background: var(--primary-color);
+  position: absolute;
+  left: 0;
+  top: 0;
+}
+
+/* Tests page  */
+
+
 
 /* Media queries  */
 
