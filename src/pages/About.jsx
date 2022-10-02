@@ -10,9 +10,9 @@ function About() {
     <>
       <Header />
       <Banner />
-      <section className="aboutsec">
+      <section className="about-main">
         <BreadCrumb page="Haqqımızda" url="about" />
-        <div className="aboutsec-2">
+        <div className="about-main2">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
@@ -22,7 +22,7 @@ function About() {
             remaining essentially unchanged. It was popularised in the 1960s.
           </p>
         </div>
-        <div className="aboutsec-3">
+        <div className="about-main3">
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
