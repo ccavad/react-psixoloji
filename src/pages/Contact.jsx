@@ -32,6 +32,7 @@ const Grid = styled.div`
     &:active,
     &:focus {
       outline: 1px solid #246fb2;
+      border: 0;
     }
   }
   textarea {

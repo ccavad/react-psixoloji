@@ -5,6 +5,7 @@ import Header from "../components/Header";
 import styled from "styled-components";
 import BreadCrumb from "../components/BreadCrumb";
 import NewsItem from "../components/NewsItem";
+import { nanoid } from "nanoid";
 
 const NewsGrid = styled.div`
   display: grid;
@@ -28,13 +29,13 @@ function News() {
         <BreadCrumb page="Xəbərlər" url="/news" />
         <NewsGrid>
           {imgUrls.map((img) => (
-            <NewsItem src={img} />
+            <NewsItem src={img} key={nanoid()} />
           ))}
           {imgUrls.map((img) => (
-            <NewsItem src={img} />
+            <NewsItem src={img} key={nanoid()} />
           ))}
           {imgUrls.map((img) => (
-            <NewsItem src={img} />
+            <NewsItem src={img} key={nanoid()} />
           ))}
         </NewsGrid>
       </main>

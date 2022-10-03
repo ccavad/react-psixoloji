@@ -271,7 +271,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
-  position: relative
+  position: relativeab
 }
 
 .home__s3 div {
@@ -391,15 +391,15 @@ footer {
 
 /* About component  */
 
-.about-main {
+/* .about-main {
   padding: 3rem 6%;
   display: flex;
   flex-direction: column;
   gap: 2rem;
   position: relative; 
-}
+} */
 
-.about-main2 p {
+/* .about-main2 p {
   width: 50%;
   float: right
 }
@@ -407,7 +407,7 @@ footer {
 .about-main3 p {
   width: 50%;
   float: left;
-}
+} */
 
 /* Tests page  */
 
