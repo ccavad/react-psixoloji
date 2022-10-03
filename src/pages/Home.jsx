@@ -2,6 +2,15 @@ import React from "react";
 import Header from "../components/Header";
 import Footer from "../components/Footer";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const Image = styled.img`
+  position: absolute;
+  top: ${(props) => props.top};
+  left: ${(props) => props.left};
+  right: ${(props) => props.right};
+  bottom: ${(props) => props.bottom};
+`;
 
 function Home() {
   return (
@@ -49,6 +58,36 @@ function Home() {
           <Link to="/quiz" className="home__s3--link">
             İmtahana başla
           </Link>
+          <Image
+            top="0px"
+            left="0px"
+            src="../../public/assets/Group 634.png"
+          ></Image>
+          <Image
+            bottom="10px"
+            left="10%"
+            src="../../public/assets/Group 635.png"
+          ></Image>
+          <Image
+            bottom="0px"
+            left="35%"
+            src="../../public/assets/Path 4258.png"
+          ></Image>
+          <Image
+            bottom="20%"
+            right="30%"
+            src="../../public/assets/Group 636.png"
+          ></Image>
+          <Image
+            bottom="0px"
+            right="10%"
+            src="../../public/assets/Group 633.png"
+          ></Image>
+          <Image
+            right="0px"
+            top="0%"
+            src="../../public/assets/Path 4257.png"
+          ></Image>
         </div>
       </section>
       <section className="home4">
@@ -92,7 +131,23 @@ function Home() {
           </div>
         </div>
         <div className="home4__bottom">
-          
+          <img src="../../public/assets/Partner-logo-2016.png" alt="logo" />
+          <img src="../../public/assets/256x256bb.png" alt="logo" />
+          <img
+            src="../../public/assets/ff776d563a0a60748fd8728773a2d79a722afa858f0806b2f514d06ca3cd305b.png"
+            alt="logo"
+          />
+          <img src="../../public/assets/images (1).png" alt="logo" />
+          <img src="../../public/assets/images.png" alt="logo" />
+          <img
+            src="../../public/assets/partner-now-logo-png-transparent.png"
+            alt="logo"
+          />
+          <img
+            src="../../public/assets/peugeot-partner-1-logo-png-transparent.png"
+            alt="logo"
+          />
+          <img src="../../public/assets/unnamed.png" alt="logo" />
         </div>
       </section>
       <Footer />
