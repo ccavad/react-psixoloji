@@ -23,6 +23,12 @@ const NewsStyled = styled.div`
     border: 1px solid #246fb2;
     border-radius: 5px;
     padding: 0.8rem 2.7rem;
+    transition: 0.4s;
+
+    &:hover {
+      background-color: #246fb2;
+      color: white;
+    }
   }
 `;
 
