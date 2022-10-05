@@ -1,9 +1,16 @@
-import React from "react";
+import React, { useState } from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import styled from "styled-components";
-import { Btn, Input, Label } from "../components/Styled";
+import { Btn, Input, Label, TextArea } from "../components/Styled";
+
+const Form = styled.form`
+  display: flex;
+  flex-direction: column;
+  gap: 3rem;
+  width: 50%;
+`;
 
 const Grid = styled.div`
   display: grid;
@@ -25,6 +32,7 @@ const P = styled.p`
 `;
 
 function Payment() {
+  const [tab, setTab] = useState("personal");
   return (
     <>
       <Header />
@@ -36,39 +44,80 @@ function Payment() {
           alt="visa"
           width="max-content"
         />
-        <form onSubmit={(e) => e.preventDefault()}>
-          <Grid>
-            <Label style={{ gridColumn: "span 2" }}>
-              <div>
-                Kartın nömrəsi <span>*</span>
-              </div>
-              <Input type="text" placeholder="____ ____ ____ ____" />
-            </Label>
-            <Label>
-              <div>
-                Tarix <span>*</span>
-              </div>
-              <Input type="text" placeholder="MM/YY" />
-            </Label>
-            <Label>
-              <div>
-                CVV <span>*</span>
-              </div>
-              <Input type="text" placeholder="CVV 2" />
-            </Label>
-          </Grid>
-          <H3 fs={"24px"}>Ödəniş məlumatları</H3>
-          <P>Ödənişin məbləği</P>
-          <H3 fs={"22px"}>20 azn</H3>
-          <P>Sifariş nömrəsi</P>
-          <H3 fs={"22px"}>50489912</H3>
-          <div>
-            <Btn>Geri</Btn>
-            <Btn>Növbəti</Btn>
-          </div>
-        </form>
+        <Form>
+          {tab === "personal" && <PersonalInfo setTab={setTab} />}
+          {tab === "card" && <CardDetails setTab={setTab} />}
+        </Form>
       </main>
       <Footer />
+    </>
+  );
+}
+
+function PersonalInfo({ setTab }) {
+  return (
+    <>
+      <Label>
+        <div>
+          Adınız, Soyadınız <span>*</span>
+        </div>
+        <Input type="text" placeholder="Adınızı və soyadınızı daxil edin" />
+      </Label>
+      <Label>
+        <div>
+          Telefonlar <span>*</span>
+        </div>
+        <Input type="tel" placeholder="050 _ _ _  _ _  _ _" />
+      </Label>
+      <Label>
+        <div>
+          E-poçt ünvanınız <span>*</span>
+        </div>
+        <Input type="email" placeholder="E-mail ünvanınızı daxil edin" />
+      </Label>
+      <Label>
+        Qeyd
+        <TextArea placeholder="Qeyd daxil edin"></TextArea>
+      </Label>
+      <Btn type="button" onClick={() => setTab("card")}>
+        Növbəti
+      </Btn>
+    </>
+  );
+}
+
+function CardDetails({ setTab }) {
+  return (
+    <>
+      <Grid>
+        <Label style={{ gridColumn: "span 2" }}>
+          <div>
+            Kartın nömrəsi <span>*</span>
+          </div>
+          <Input type="text" placeholder="____ ____ ____ ____" />
+        </Label>
+        <Label>
+          <div>
+            Tarix <span>*</span>
+          </div>
+          <Input type="text" placeholder="MM/YY" />
+        </Label>
+        <Label>
+          <div>
+            CVV <span>*</span>
+          </div>
+          <Input type="text" placeholder="CVV 2" />
+        </Label>
+      </Grid>
+      <H3 fs={"24px"}>Ödəniş məlumatları</H3>
+      <P>Ödənişin məbləği</P>
+      <H3 fs={"22px"}>20 azn</H3>
+      <P>Sifariş nömrəsi</P>
+      <H3 fs={"22px"}>50489912</H3>
+      <div style={{ display: "flex", gap: "2rem" }}>
+        <Btn onClick={() => setTab("personal")}>Geri</Btn>
+        <Btn>Növbəti</Btn>
+      </div>
     </>
   );
 }
