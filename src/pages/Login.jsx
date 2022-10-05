@@ -3,6 +3,7 @@ import Banner from "../components/Banner";
 import Footer from "../components/Footer";
 import Header from "../components/Header";
 import styled from "styled-components";
+import { Btn } from "../components/Styled";
 
 const Form = styled.form`
   display: flex;
@@ -40,19 +41,6 @@ const Form = styled.form`
   textarea {
     font-family: inherit;
   }
-
-  button {
-    width: 280px;
-    box-shadow: 1px 3px 10px rgba(20, 179, 240, 12%);
-    border: 0;
-    background-color: white;
-    color: #24324a;
-    padding: 1.5rem 5rem;
-    border-radius: 10px;
-    font-size: 1.2rem;
-    font-weight: bold;
-    cursor: pointer;
-  }
 `;
 
 function Login() {
@@ -84,7 +72,7 @@ function Login() {
             Qeyd
             <textarea placeholder="Qeyd daxil edin"></textarea>
           </label>
-          <button type="submit">Növbəti</button>
+          <Btn type="submit">Növbəti</Btn>
         </Form>
       </main>
       <Footer />
