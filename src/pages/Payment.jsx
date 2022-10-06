@@ -39,11 +39,7 @@ function Payment() {
       <Banner />
       <main>
         <h2>Kart məlumatlarını daxil edin:</h2>
-        <img
-          src="../../public/assets/Group 649.png"
-          alt="visa"
-          width="max-content"
-        />
+        <img src="../../assets/Group 649.png" alt="visa" width="max-content" />
         <Form>
           {tab === "personal" && <PersonalInfo setTab={setTab} />}
           {tab === "card" && <CardDetails setTab={setTab} />}

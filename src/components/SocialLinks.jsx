@@ -1,5 +1,5 @@
-import React from 'react'
-import { nanoid } from 'nanoid';
+import React from "react";
+import { nanoid } from "nanoid";
 
 function SocialLinks() {
   const socialLinks = ["fb", "ln", "tw", "ig", "yt"];
@@ -10,16 +10,13 @@ function SocialLinks() {
         return (
           <li key={nanoid()}>
             <a href="#">
-              <img
-                src={`../../public/assets/${link}.png`}
-                alt="socialmedia logo"
-              />
+              <img src={`../../assets/${link}.png`} alt="socialmedia logo" />
             </a>
           </li>
         );
       })}
     </>
-  )
+  );
 }
 
-export default SocialLinks
+export default SocialLinks;

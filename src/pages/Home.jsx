@@ -19,7 +19,7 @@ function Home() {
       <section className="home__s1">
         <img
           className="home__s1--img"
-          src="../../public/assets/home-banner.png"
+          src="../../assets/home-banner.png"
           alt="mental check"
         />
         <div>
@@ -34,8 +34,8 @@ function Home() {
       </section>
       <section className="home__s2">
         <div className="home__s2__images">
-          <img src="../../public/assets/home-s2-i1.png" />
-          <img src="../../public/assets/home-s2-i2.png" />
+          <img src="../../assets/home-s2-i1.png" />
+          <img src="../../assets/home-s2-i2.png" />
         </div>
         <div className="home__s2__text">
           <h2 className="home__s2--title">Biz kimik?</h2>
@@ -58,36 +58,28 @@ function Home() {
           <Link to="/quiz" className="home__s3--link">
             İmtahana başla
           </Link>
-          <Image
-            top="0px"
-            left="0px"
-            src="../../public/assets/Group 634.png"
-          ></Image>
+          <Image top="0px" left="0px" src="../../assets/Group 634.png"></Image>
           <Image
             bottom="10px"
             left="10%"
-            src="../../public/assets/Group 635.png"
+            src="../../assets/Group 635.png"
           ></Image>
           <Image
             bottom="0px"
             left="35%"
-            src="../../public/assets/Path 4258.png"
+            src="../../assets/Path 4258.png"
           ></Image>
           <Image
             bottom="20%"
             right="30%"
-            src="../../public/assets/Group 636.png"
+            src="../../assets/Group 636.png"
           ></Image>
           <Image
             bottom="0px"
             right="10%"
-            src="../../public/assets/Group 633.png"
+            src="../../assets/Group 633.png"
           ></Image>
-          <Image
-            right="0px"
-            top="0%"
-            src="../../public/assets/Path 4257.png"
-          ></Image>
+          <Image right="0px" top="0%" src="../../assets/Path 4257.png"></Image>
         </div>
       </section>
       <section className="home4">
@@ -100,7 +92,7 @@ function Home() {
         </div>
         <div className="home4__middle">
           <div className="grid-item">
-            <img src="../../public/assets/concept-problems-with-memory-amnesia-disease.png" />
+            <img src="../../assets/concept-problems-with-memory-amnesia-disease.png" />
             <h4>LOREM IPSUM IS SIMPLY</h4>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -110,7 +102,7 @@ function Home() {
             <Link to="/news">Daha çox</Link>
           </div>
           <div className="grid-item">
-            <img src="../../public/assets/close-up-female-psychologist-looking-sad-girl-holding-teddy-bear.png" />
+            <img src="../../assets/close-up-female-psychologist-looking-sad-girl-holding-teddy-bear.png" />
             <h4>LOREM IPSUM IS SIMPLY</h4>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -120,7 +112,7 @@ function Home() {
             <Link to="/news">Daha çox</Link>
           </div>
           <div className="grid-item">
-            <img src="../../public/assets/man-sitting-psychologist-s-office-talking-about-problems.png" />
+            <img src="../../assets/man-sitting-psychologist-s-office-talking-about-problems.png" />
             <h4>LOREM IPSUM IS SIMPLY</h4>
             <p>
               Lorem Ipsum is simply dummy text of the printing and typesetting
@@ -131,23 +123,23 @@ function Home() {
           </div>
         </div>
         <div className="home4__bottom">
-          <img src="../../public/assets/Partner-logo-2016.png" alt="logo" />
-          <img src="../../public/assets/256x256bb.png" alt="logo" />
+          <img src="../../assets/Partner-logo-2016.png" alt="logo" />
+          <img src="../../assets/256x256bb.png" alt="logo" />
           <img
-            src="../../public/assets/ff776d563a0a60748fd8728773a2d79a722afa858f0806b2f514d06ca3cd305b.png"
+            src="../../assets/ff776d563a0a60748fd8728773a2d79a722afa858f0806b2f514d06ca3cd305b.png"
             alt="logo"
           />
-          <img src="../../public/assets/images (1).png" alt="logo" />
-          <img src="../../public/assets/images.png" alt="logo" />
+          <img src="../../assets/images (1).png" alt="logo" />
+          <img src="../../assets/images.png" alt="logo" />
           <img
-            src="../../public/assets/partner-now-logo-png-transparent.png"
+            src="../../assets/partner-now-logo-png-transparent.png"
             alt="logo"
           />
           <img
-            src="../../public/assets/peugeot-partner-1-logo-png-transparent.png"
+            src="../../assets/peugeot-partner-1-logo-png-transparent.png"
             alt="logo"
           />
-          <img src="../../public/assets/unnamed.png" alt="logo" />
+          <img src="../../assets/unnamed.png" alt="logo" />
         </div>
       </section>
       <Footer />

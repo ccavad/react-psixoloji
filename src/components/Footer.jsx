@@ -8,7 +8,7 @@ function Footer() {
       <div className="footer__top">
         <div className="footer__logo">
           <Link to="/">
-            <img src="../../public/assets/logo.png" alt="logo" />
+            <img src="../../assets/logo.png" alt="logo" />
           </Link>
           <ul className="footer__social">
             <SocialLinks />

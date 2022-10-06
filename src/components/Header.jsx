@@ -11,15 +11,17 @@ function Header() {
       <header>
         <div className="header__logo">
           <Link to="/">
-            <img src="../../public/assets/logo.png" alt="logo psychology" />
+            <img src="../../assets/logo.png" alt="logo psychology" />
           </Link>
         </div>
         <div className="header__right">
           <div className="header__top">
             <ul className="header__social">
-              <SocialLinks/>
+              <SocialLinks />
             </ul>
-            <Link to="/login" className="header__login">Giriş et</Link>
+            <Link to="/login" className="header__login">
+              Giriş et
+            </Link>
           </div>
           <div className="header__bottom">
             <HeaderNavbar />

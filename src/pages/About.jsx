@@ -36,11 +36,11 @@ function About() {
         <MainSec>
           <ImgCont>
             <img
-              src="../../public/assets/home-s2-i1.png"
+              src="../../assets/home-s2-i1.png"
               style={{ alignSelf: "flex-start" }}
             />
             <img
-              src="../../public/assets/home-s2-i2.png"
+              src="../../assets/home-s2-i2.png"
               style={{ alignSelf: "flex-end" }}
             />
           </ImgCont>
@@ -64,10 +64,10 @@ function About() {
           </p>
           <ImgCont>
             <img
-              src="../../public/assets/Group 672.png"
+              src="../../assets/Group 672.png"
               style={{ alignSelf: "flex-end" }}
             />
-            <img src="../../public/assets/Group 671.png" />
+            <img src="../../assets/Group 671.png" />
           </ImgCont>
         </MainSec>
       </Main>

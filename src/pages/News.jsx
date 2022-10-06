@@ -16,9 +16,9 @@ const NewsGrid = styled.div`
 
 function News() {
   const imgUrls = [
-    "../../public/assets/concept-problems-with-memory-amnesia-disease.png",
-    "../../public/assets/close-up-female-psychologist-looking-sad-girl-holding-teddy-bear.png",
-    "../../public/assets/man-sitting-psychologist-s-office-talking-about-problems.png",
+    "../../assets/concept-problems-with-memory-amnesia-disease.png",
+    "../../assets/close-up-female-psychologist-looking-sad-girl-holding-teddy-bear.png",
+    "../../assets/man-sitting-psychologist-s-office-talking-about-problems.png",
   ];
 
   return (
