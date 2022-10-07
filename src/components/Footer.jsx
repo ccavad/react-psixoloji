@@ -1,20 +1,77 @@
 import React from "react";
 import SocialLinks from "./SocialLinks";
 import { Link } from "react-router-dom";
+import styled from "styled-components";
+
+const FooterStyled = styled.footer`
+  background-color: #fafafa;
+  padding: 3rem 6%;
+`;
+
+const FooterTop = styled.div`
+  display: grid;
+  grid-template-columns: 180px auto;
+  align-items: center;
+  gap: 3rem;
+  border-bottom: 1px solid var(--dark-gray);
+  padding-bottom: 3rem;
+`;
+
+const FooterNav = styled.div`
+  display: flex;
+  justify-content: space-around;
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 1.2rem;
+  }
+
+  a {
+    color: var(--dark-gray);
+    font-size: 18px;
+  }
+`;
+
+const FooterSocial = styled.ul`
+  display: flex;
+  justify-content: space-around;
+`;
+
+const FooterBottom = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 1.5rem;
+
+  div {
+    display: flex;
+    gap: 4rem;
+  }
+
+  a {
+    color: var(--dark-gray);
+    text-decoration: underline;
+  }
+`;
 
 function Footer() {
   return (
-    <footer>
-      <div className="footer__top">
+    <FooterStyled>
+      <FooterTop>
         <div className="footer__logo">
           <Link to="/">
-            <img src="../../assets/logo.png" alt="logo" />
+            <img
+              src="../../assets/logo.png"
+              alt="logo"
+              style={{ maxWidth: "100%" }}
+            />
           </Link>
-          <ul className="footer__social">
+          <FooterSocial>
             <SocialLinks />
-          </ul>
+          </FooterSocial>
         </div>
-        <div className="footer__nav">
+        <FooterNav>
           <ul>
             <li>
               <Link to="/about">Haqqımızda</Link>
@@ -51,9 +108,9 @@ function Footer() {
               <Link to="*">Şərtlər və qaydalar</Link>
             </li>
           </ul>
-        </div>
-      </div>
-      <div className="footer__bottom">
+        </FooterNav>
+      </FooterTop>
+      <FooterBottom>
         <p>
           Copyright{" "}
           <a
@@ -67,8 +124,8 @@ function Footer() {
           <a href="tel:+0553334503">055 333 45 03</a>
           <a href="mailto:info@psixoloji.az">info@psixoloji.az</a>
         </div>
-      </div>
-    </footer>
+      </FooterBottom>
+    </FooterStyled>
   );
 }
 

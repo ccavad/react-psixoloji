@@ -38,8 +38,6 @@ function Payment() {
       <Header />
       <Banner />
       <main>
-        <h2>Kart məlumatlarını daxil edin:</h2>
-        <img src="../../assets/Group 649.png" alt="visa" width="max-content" />
         <Form>
           {tab === "personal" && <PersonalInfo setTab={setTab} />}
           {tab === "card" && <CardDetails setTab={setTab} />}
@@ -85,6 +83,12 @@ function PersonalInfo({ setTab }) {
 function CardDetails({ setTab }) {
   return (
     <>
+      <h2>Kart məlumatlarını daxil edin:</h2>
+      <img
+        src="../../assets/Group 649.png"
+        alt="visa"
+        style={{ alignSelf: "self-start" }}
+      />
       <Grid>
         <Label style={{ gridColumn: "span 2" }}>
           <div>
@@ -105,11 +109,13 @@ function CardDetails({ setTab }) {
           <Input type="text" placeholder="CVV 2" />
         </Label>
       </Grid>
-      <H3 fs={"24px"}>Ödəniş məlumatları</H3>
-      <P>Ödənişin məbləği</P>
-      <H3 fs={"22px"}>20 azn</H3>
-      <P>Sifariş nömrəsi</P>
-      <H3 fs={"22px"}>50489912</H3>
+      <div>
+        <H3 fs={"24px"}>Ödəniş məlumatları</H3>
+        <P>Ödənişin məbləği</P>
+        <H3 fs={"22px"}>20 azn</H3>
+        <P>Sifariş nömrəsi</P>
+        <H3 fs={"22px"}>50489912</H3>
+      </div>
       <div style={{ display: "flex", gap: "2rem" }}>
         <Btn onClick={() => setTab("personal")}>Geri</Btn>
         <Btn>Növbəti</Btn>
