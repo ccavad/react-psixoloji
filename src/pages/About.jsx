@@ -15,21 +15,27 @@ const Main = styled.main`
 `;
 
 const MainSec = styled.div`
-  /* height: 300px; */
   display: flex;
   align-items: center;
   gap: 2rem;
+  flex-direction: ${(props) => props.dir};
 
   @media (max-width: 900px) {
     flex-direction: column;
     gap: 3rem;
     margin-bottom: 3rem;
+    text-align: center;
   }
 `;
 
 const ImgCont = styled.div`
   display: flex;
   height: 100%;
+  justify-content: center;
+
+  img {
+    align-self: end;
+  }
 
   @media (max-width: 900px) {
     height: auto;
@@ -50,18 +56,12 @@ function About() {
       <Banner />
       <Main>
         <BreadCrumb page="Haqqımızda" url="about" />
-        <MainSec>
+        <MainSec dir={"row"}>
           <ImgCont>
-            <img
-              src="../../assets/home-s2-i1.png"
-              style={{ alignSelf: "flex-start" }}
-            />
-            <img
-              src="../../assets/home-s2-i2.png"
-              style={{ alignSelf: "flex-end" }}
-            />
+            <img src="../../assets/home-s2-i1.png" />
+            <img src="../../assets/home-s2-i2.png" />
           </ImgCont>
-          <p style={{ textAlign: "right" }}>
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -70,8 +70,12 @@ function About() {
             remaining essentially unchanged. It was popularised in the 1960s.
           </p>
         </MainSec>
-        <MainSec style={{ flexDirection: "column-reverse" }}>
-          <p style={{ float: "right" }}>
+        <MainSec dir={"row-reverse"}>
+          <ImgCont>
+            <img src="../../assets/Group 672.png" />
+            <img src="../../assets/Group 671.png" />
+          </ImgCont>
+          <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
             ever since the 1500s, when an unknown printer took a galley of type
@@ -79,13 +83,6 @@ function About() {
             only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s.
           </p>
-          <ImgCont>
-            <img
-              src="../../assets/Group 672.png"
-              style={{ alignSelf: "flex-end" }}
-            />
-            <img src="../../assets/Group 671.png" />
-          </ImgCont>
         </MainSec>
       </Main>
       <Footer />
