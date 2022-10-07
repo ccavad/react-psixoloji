@@ -105,7 +105,7 @@ function Header() {
         {/* header logo */}
         <div style={{ flex: "1" }}>
           <Link to="/">
-            <img src="../../assets/logo.png" alt="logo psychology" />
+            <img src="assets/logo.png" alt="logo psychology" />
           </Link>
         </div>
         <HeaderRight>
