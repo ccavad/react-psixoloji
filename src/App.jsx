@@ -1,20 +1,17 @@
-import { useState } from 'react'
-import './App.css'
+import "./App.css";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
-import Home from "./pages/Home"
-import About from "./pages/About"
-import Tests from "./pages/Tests"
-import Partners from "./pages/Partners"
-import News from "./pages/News"
-import Contact from "./pages/Contact"
-import Login from "./pages/Login"
-import Payment from "./pages/Payment"
-import Quiz from "./pages/Quiz"
-import ErrorPage from "./pages/ErrorPage"
+import Home from "./pages/Home";
+import About from "./pages/About";
+import Tests from "./pages/Tests";
+import Partners from "./pages/Partners";
+import News from "./pages/News";
+import Contact from "./pages/Contact";
+import Login from "./pages/Login";
+import Payment from "./pages/Payment";
+import Quiz from "./pages/Quiz";
+import ErrorPage from "./pages/ErrorPage";
 
 function App() {
-  const [count, setCount] = useState(0)
-
   return (
     <BrowserRouter>
       <Routes>
@@ -30,7 +27,7 @@ function App() {
         <Route path="*" element={<ErrorPage />} />
       </Routes>
     </BrowserRouter>
-  )
+  );
 }
 
-export default App
+export default App;

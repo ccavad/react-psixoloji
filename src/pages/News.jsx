@@ -12,6 +12,10 @@ const NewsGrid = styled.div`
   grid-template-columns: repeat(3, 1fr);
   margin-top: 1rem;
   gap: 1.5rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+  }
 `;
 
 function News() {

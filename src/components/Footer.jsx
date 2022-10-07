@@ -15,11 +15,22 @@ const FooterTop = styled.div`
   gap: 3rem;
   border-bottom: 1px solid var(--dark-gray);
   padding-bottom: 3rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
 `;
 
 const FooterNav = styled.div`
   display: flex;
   justify-content: space-around;
+
+  @media (max-width: 968px) {
+    flex-direction: column;
+    text-align: center;
+    gap: 3rem;
+  }
 
   ul {
     display: flex;
@@ -44,9 +55,18 @@ const FooterBottom = styled.div`
   align-items: center;
   padding-top: 1.5rem;
 
+  @media (max-width: 564px) {
+    flex-direction: column;
+
+    div {
+      gap: 0 !important;
+      flex-direction: column;
+    }
+  }
+
   div {
     display: flex;
-    gap: 4rem;
+    gap: 2rem;
   }
 
   a {

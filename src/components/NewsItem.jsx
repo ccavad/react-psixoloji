@@ -8,6 +8,11 @@ const NewsStyled = styled.div`
   gap: 1rem;
   align-items: flex-start;
 
+  @media (max-width: 968px) {
+    align-items: center;
+    text-align: center;
+  }
+
   h4 {
     color: #303030;
     font-size: 18px;

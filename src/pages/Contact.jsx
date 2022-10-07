@@ -11,6 +11,11 @@ const Grid = styled.div`
   gap: 1rem;
   margin-top: 2rem;
 
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+    justify-items: center;
+  }
+
   label {
     color: #434343;
     font-size: 20px;

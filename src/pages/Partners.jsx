@@ -6,11 +6,11 @@ import styled from "styled-components";
 import BreadCrumb from "../components/BreadCrumb";
 
 const Grid = styled.div`
-  display: grid;
-  grid-template-columns: repeat(4, 1fr);
-  margin-top: 3rem;
-  justify-items: center;
-  gap: 2rem;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  justify-content: center;
+  margin-top: 2rem;
 `;
 
 function Partners() {

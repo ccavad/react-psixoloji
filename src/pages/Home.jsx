@@ -16,14 +16,10 @@ function Home() {
   return (
     <>
       <Header />
-      <section className="home__s1">
-        <img
-          className="home__s1--img"
-          src="../../assets/home-banner.png"
-          alt="mental check"
-        />
+      <Section1>
+        <img src="../../assets/home-banner.png" alt="mental check" />
         <div>
-          <h2 className="home__s1--title">
+          <h2 style={{ color: "white" }}>
             Psixoloji Sınaq Mərkəzi müxtəlif yaş kateqoriyalarına uyğun online
             psixoloji imtahan mərkəzidir.
           </h2>
@@ -31,14 +27,14 @@ function Home() {
             İmtahanlar
           </Link>
         </div>
-      </section>
-      <section className="home__s2">
-        <div className="home__s2__images">
+      </Section1>
+      <Section2>
+        <Section2Images>
           <img src="../../assets/home-s2-i1.png" />
           <img src="../../assets/home-s2-i2.png" />
-        </div>
-        <div className="home__s2__text">
-          <h2 className="home__s2--title">Biz kimik?</h2>
+        </Section2Images>
+        <Section2Text>
+          <h2>Biz kimik?</h2>
           <p>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
@@ -47,17 +43,15 @@ function Home() {
             only five centuries, but also the leap into electronic typesetting,
             remaining essentially unchanged. It was popularised in the 1960s.
           </p>
-        </div>
-      </section>
-      <section className="home__s3">
+        </Section2Text>
+      </Section2>
+      <Section3>
         <div>
-          <h2 className="home__s3--title">
+          <h2 style={{ color: "white" }}>
             Psixoloji Sınaq Mərkəzi müxtəlif yaş kateqoriyalarına uyğun online
             psixoloji imtahan mərkəzidir.
           </h2>
-          <Link to="/quiz" className="home__s3--link">
-            İmtahana başla
-          </Link>
+          <Link to="/quiz">İmtahana başla</Link>
           <Image top="0px" left="0px" src="../../assets/Group 634.png"></Image>
           <Image
             bottom="10px"
@@ -81,17 +75,17 @@ function Home() {
           ></Image>
           <Image right="0px" top="0%" src="../../assets/Path 4257.png"></Image>
         </div>
-      </section>
-      <section className="home4">
-        <div className="home4__top">
+      </Section3>
+      <Section4>
+        <Section4Top>
           <div>
             <h3>XƏBƏRLƏR</h3>
             <p>Lorem ipsum dolar sit amet</p>
           </div>
           <Link to="/news">Daha çox</Link>
-        </div>
-        <div className="home4__middle">
-          <div className="grid-item">
+        </Section4Top>
+        <Section4Middle>
+          <Section4GridItem>
             <img src="../../assets/concept-problems-with-memory-amnesia-disease.png" />
             <h4>LOREM IPSUM IS SIMPLY</h4>
             <p>
@@ -99,9 +93,14 @@ function Home() {
               industry. Lorem Ipsum has been the industry’s standard dummy text
               ever since the 1500s…
             </p>
-            <Link to="/news">Daha çox</Link>
-          </div>
-          <div className="grid-item">
+            <Link
+              to="/news"
+              style={{ backgroundColor: "#246FB2", color: "white" }}
+            >
+              Daha çox
+            </Link>
+          </Section4GridItem>
+          <Section4GridItem>
             <img src="../../assets/close-up-female-psychologist-looking-sad-girl-holding-teddy-bear.png" />
             <h4>LOREM IPSUM IS SIMPLY</h4>
             <p>
@@ -110,8 +109,8 @@ function Home() {
               ever since the 1500s…
             </p>
             <Link to="/news">Daha çox</Link>
-          </div>
-          <div className="grid-item">
+          </Section4GridItem>
+          <Section4GridItem>
             <img src="../../assets/man-sitting-psychologist-s-office-talking-about-problems.png" />
             <h4>LOREM IPSUM IS SIMPLY</h4>
             <p>
@@ -120,9 +119,9 @@ function Home() {
               ever since the 1500s…
             </p>
             <Link to="/news">Daha çox</Link>
-          </div>
-        </div>
-        <div className="home4__bottom">
+          </Section4GridItem>
+        </Section4Middle>
+        <Section4Bottom>
           <img src="../../assets/Partner-logo-2016.png" alt="logo" />
           <img src="../../assets/256x256bb.png" alt="logo" />
           <img
@@ -140,11 +139,259 @@ function Home() {
             alt="logo"
           />
           <img src="../../assets/unnamed.png" alt="logo" />
-        </div>
-      </section>
+        </Section4Bottom>
+      </Section4>
       <Footer />
     </>
   );
 }
+
+const Section1 = styled.section`
+  height: 460px;
+  width: 100%;
+  position: relative;
+
+  &::after {
+    content: "";
+    top: 0;
+    left: 0;
+    background-color: rgba(0, 0, 0, 0.5);
+    width: 100%;
+    height: 100%;
+    position: absolute;
+  }
+
+  img {
+    position: absolute;
+    left: 0;
+    top: 0;
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+  }
+
+  > div {
+    position: absolute;
+    width: 50%;
+    left: 0;
+    top: 0;
+    z-index: 10;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    padding-left: 10%;
+
+    @media (max-width: 968px) {
+      width: 100%;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+    }
+
+    a {
+      background-color: #f8a80d;
+      color: white;
+      border-radius: 5px;
+      padding: 1rem 2rem;
+      margin-top: 2rem;
+    }
+  }
+`;
+
+const Section2 = styled.section`
+  display: grid;
+  grid-template-columns: 1fr 2fr;
+  padding: 3rem 10%;
+  gap: 2rem;
+
+  @media (max-width: 768px) {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+`;
+
+const Section2Images = styled.div`
+  position: relative;
+
+  @media (max-width: 768px) {
+    display: none;
+  }
+
+  img {
+    width: 50%;
+    position: absolute;
+
+    &:nth-of-type(1) {
+      top: 0;
+      left: 0;
+    }
+    &:nth-of-type(2) {
+      bottom: 0;
+      right: 0;
+    }
+  }
+`;
+
+const Section2Text = styled.div`
+  p {
+    max-width: 600px;
+    text-align: right;
+    float: right;
+    color: #626262;
+  }
+  h2 {
+    position: relative;
+    padding-right: 1rem;
+    color: #3c3c3c;
+    text-align: right;
+
+    &::after {
+      content: "";
+      position: absolute;
+      right: 0px;
+      width: 5px;
+      height: 100%;
+      background: var(--primary-color);
+    }
+  }
+`;
+
+const Section3 = styled.section`
+  background-color: var(--primary-color);
+  padding: 3rem 10%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+
+  @media (max-width: 968px) {
+    padding-block: 5rem !important;
+  }
+
+  > div {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+
+    a {
+      background-color: transparent;
+      border: 1px solid white;
+      padding: 1rem 2rem;
+      color: white;
+      transition: 0.2s;
+
+      &:hover {
+        color: var(--primary-color);
+        background-color: white;
+      }
+    }
+  }
+`;
+
+const Section4 = styled.section`
+  padding: 3rem 6%;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+`;
+
+const Section4Top = styled.div`
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+
+  > div {
+    position: relative;
+    padding-left: 1rem;
+
+    &::after {
+      content: "";
+      position: absolute;
+      width: 5px;
+      height: 100%;
+      background-color: var(--primary-color);
+      top: 0;
+      left: 0;
+    }
+  }
+  a {
+    background-color: transparent;
+    color: #f8a80d;
+    border: 1px solid #f8a80d;
+    border-radius: 5px;
+    padding: 1rem 2.5rem;
+    transition: 0.2s;
+
+    @media (max-width: 564px) {
+      display: none;
+    }
+
+    &:hover {
+      background-color: #f8a80d;
+      color: white;
+    }
+  }
+`;
+
+const Section4Middle = styled.div`
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-items: center;
+  gap: 1rem;
+
+  @media (max-width: 968px) {
+    grid-template-columns: 1fr;
+  }
+`;
+
+const Section4GridItem = styled.div`
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  align-items: flex-start;
+  max-width: 300px;
+
+  @media (max-width: 968px) {
+    align-items: center;
+    text-align: center;
+  }
+
+  img {
+    max-width: 100%;
+  }
+
+  h4 {
+    color: var(--dark-gray);
+    font-size: 18px;
+    width: 100%;
+  }
+  p {
+    color: var(--dark-gray);
+    font-size: 14px;
+    width: 90%;
+  }
+  a {
+    background-color: white;
+    color: var(--primary-color);
+    border: 1px solid var(--primary-color);
+    border-radius: 5px;
+    padding: 0.8rem 2.7rem;
+  }
+`;
+
+const Section4Bottom = styled.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 3rem;
+  gap: 1rem;
+`;
 
 export default Home;

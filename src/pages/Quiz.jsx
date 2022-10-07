@@ -29,6 +29,7 @@ const StyledQuiz = styled.ul`
       font-size: 17px;
       cursor: pointer;
       width: 200px;
+      user-select: none;
     }
   }
 `;
@@ -58,8 +59,6 @@ function Quiz() {
               <QuizItem
                 index={`${ind + 1}. `}
                 question={ind % 2 === 0 ? questions[1] : questions[0]}
-                // answer={answer}
-                // setAnswer={setAnswer}
               />
             </li>
           ))}
@@ -75,7 +74,7 @@ function QuizItem({ index, question }) {
   const [answer, setAnswer] = useState("none");
 
   return (
-    <div>
+    <>
       <h3>{index + question}</h3>
       <ul>
         <li
@@ -103,7 +102,7 @@ function QuizItem({ index, question }) {
           Cavab 3
         </li>
       </ul>
-    </div>
+    </>
   );
 }
 

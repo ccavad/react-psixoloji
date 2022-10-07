@@ -30,15 +30,70 @@ const HeaderTop = styled.div`
   justify-content: flex-end;
   align-items: center;
   gap: 1.5rem;
+
+  @media (max-width: 1024px) {
+    display: none;
+  }
 `;
 
 const NavLink = styled(Link)`
   background-color: white;
-  border: 1px solid var(--primary-color);
-  color: var(--primary-color);
+  border: 1px solid #246fb2;
+  color: #246fb2;
   padding: 0.5rem 1.4rem;
   font-weight: 500;
   transition: all 0.2s linear;
+
+  &:hover {
+    background-color: #246fb2;
+    color: white;
+  }
+`;
+
+const HeaderHamburger = styled.div`
+  display: none;
+
+  @media (max-width: 1024px) {
+    display: block;
+  }
+
+  button {
+    color: #246fb2;
+    background-color: transparent;
+    border: 0;
+    font-size: 2rem;
+    cursor: pointer;
+
+    &:active,
+    &:focus {
+      outline: 0;
+    }
+  }
+`;
+
+const HeaderBottom = styled.div`
+  display: block;
+  @media (max-width: 1024px) {
+    display: none;
+    background: red;
+  }
+`;
+
+const HeaderMobNav = styled.div`
+  display: ${(props) => (props.hamburger ? "block" : "none")};
+  padding-block: 2rem;
+
+  @media (min-width: 1024px) {
+    display: none;
+  }
+
+  ul {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    align-items: center;
+    margin-bottom: 1.5rem;
+  }
 `;
 
 function Header() {
@@ -58,30 +113,25 @@ function Header() {
             <ul style={{ gap: "1rem" }}>
               <SocialLinks />
             </ul>
-            <NavLink to="/login" className="header__login">
-              Giriş et
-            </NavLink>
+            <NavLink to="/login">Giriş et</NavLink>
           </HeaderTop>
-          <div className="header__bottom">
+          <HeaderBottom>
             <HeaderNavbar />
-          </div>
+          </HeaderBottom>
         </HeaderRight>
-        <div className="header__hamburger">
+        <HeaderHamburger>
           <button onClick={() => setHamburger((prev) => !prev)}>
             {hamburger ? (
-              <i className="fa-solid fa-xmark"></i>
+              <ion-icon name="close"></ion-icon>
             ) : (
-              <i className="fa-solid fa-bars"></i>
+              <ion-icon name="menu"></ion-icon>
             )}
           </button>
-        </div>
+        </HeaderHamburger>
       </HeaderStyled>
-      <div
-        className="header__mobnav"
-        style={hamburger ? { display: "block" } : { display: "none" }}
-      >
+      <HeaderMobNav hamburger={hamburger}>
         <HeaderNavbar />
-      </div>
+      </HeaderMobNav>
     </>
   );
 }

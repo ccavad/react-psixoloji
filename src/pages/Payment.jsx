@@ -10,6 +10,10 @@ const Form = styled.form`
   flex-direction: column;
   gap: 3rem;
   width: 50%;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const Grid = styled.div`
@@ -18,6 +22,10 @@ const Grid = styled.div`
   gap: 1rem;
   width: 50%;
   margin-block: 3rem;
+
+  @media (max-width: 768px) {
+    width: 100%;
+  }
 `;
 
 const H3 = styled.h3`

@@ -15,15 +15,32 @@ const Main = styled.main`
 `;
 
 const MainSec = styled.div`
-  height: 300px;
+  /* height: 300px; */
   display: flex;
   align-items: center;
   gap: 2rem;
+
+  @media (max-width: 900px) {
+    flex-direction: column;
+    gap: 3rem;
+    margin-bottom: 3rem;
+  }
 `;
 
 const ImgCont = styled.div`
   display: flex;
   height: 100%;
+
+  @media (max-width: 900px) {
+    height: auto;
+    width: 150px;
+  }
+
+  img {
+    @media (max-width: 900px) {
+      width: 100%;
+    }
+  }
 `;
 
 function About() {
@@ -53,7 +70,7 @@ function About() {
             remaining essentially unchanged. It was popularised in the 1960s.
           </p>
         </MainSec>
-        <MainSec>
+        <MainSec style={{ flexDirection: "column-reverse" }}>
           <p style={{ float: "right" }}>
             Lorem Ipsum is simply dummy text of the printing and typesetting
             industry. Lorem Ipsum has been the industry’s standard dummy text
