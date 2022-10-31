@@ -11,6 +11,10 @@ const Form = styled.form`
   gap: 3rem;
   width: 50%;
   margin-top: 2rem;
+
+  @media (max-width: 968px) {
+    width: 100%;
+  }
 `;
 
 const BtnGroup = styled.div`
@@ -20,6 +24,10 @@ const BtnGroup = styled.div`
   font-size: 1rem;
   padding-left: 0;
   display: flex;
+
+  @media (max-width: 968px) {
+    width: 100%;
+  }
 `;
 
 const Button = styled.button`

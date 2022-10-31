@@ -114,7 +114,7 @@ function Header() {
         {/* header logo */}
         <HeaderLogo>
           <Link to="/">
-            <img src="../../assets/logo.png" alt="logo psychology" />
+            <img src="assets/logo.png" alt="logo psychology" />
           </Link>
         </HeaderLogo>
         <HeaderRight>
