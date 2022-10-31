@@ -96,6 +96,15 @@ const HeaderMobNav = styled.div`
   }
 `;
 
+const HeaderLogo = styled.div`
+  flex: 1;
+  img {
+    @media (max-width: 364px) {
+      width: 120px;
+    }
+  }
+`;
+
 function Header() {
   const [hamburger, setHamburger] = useState(false);
 
@@ -103,11 +112,11 @@ function Header() {
     <>
       <HeaderStyled>
         {/* header logo */}
-        <div style={{ flex: "1" }}>
+        <HeaderLogo>
           <Link to="/">
             <img src="../../assets/logo.png" alt="logo psychology" />
           </Link>
-        </div>
+        </HeaderLogo>
         <HeaderRight>
           <HeaderTop>
             <ul style={{ gap: "1rem" }}>

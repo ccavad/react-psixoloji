@@ -12,7 +12,7 @@ function Tests() {
     <>
       <Header />
       <Banner />
-      <main className="tests-main">
+      <main>
         <BreadCrumb page="Testlər" url="tests" />
         <TestsGrid>
           {new Array(5).fill(null).map((item, ind) => (

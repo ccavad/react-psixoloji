@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React from "react";
 import Header from "../components/Header";
 import Banner from "../components/Banner";
 import Footer from "../components/Footer";
@@ -27,9 +27,21 @@ const StyledQuiz = styled.ul`
     li {
       color: #24324a;
       font-size: 17px;
-      cursor: pointer;
       width: 200px;
       user-select: none;
+      max-width: 100%;
+
+      label {
+        cursor: pointer;
+      }
+
+      input {
+        visibility: hidden;
+
+        &:checked ~ span {
+          border: 1px solid #246fb2;
+        }
+      }
     }
   }
 `;
@@ -52,7 +64,7 @@ function Quiz() {
     <>
       <Header />
       <Banner />
-      <main>
+      <main style={{ paddingLeft: "3rem" }}>
         <StyledQuiz>
           {new Array(15).fill(null).map((item, ind) => (
             <li key={nanoid()}>
@@ -63,7 +75,7 @@ function Quiz() {
             </li>
           ))}
         </StyledQuiz>
-        <Btn style={{ marginLeft: "3rem" }}>Təsdiqlə</Btn>
+        <Btn>Təsdiqlə</Btn>
       </main>
       <Footer />
     </>
@@ -71,35 +83,30 @@ function Quiz() {
 }
 
 function QuizItem({ index, question }) {
-  const [answer, setAnswer] = useState("none");
-
   return (
     <>
       <h3>{index + question}</h3>
       <ul>
-        <li
-          onClick={() => {
-            answer === "a" ? setAnswer("none") : setAnswer("a");
-          }}
-        >
-          <Span color={answer === "a" && "#246FB2"}>A.</Span>
-          Cavab 1
+        <li>
+          <label>
+            <input type="radio" name={`question${index}`} />
+            <Span>A.</Span>
+            Cavab 1
+          </label>
         </li>
-        <li
-          onClick={() => {
-            answer === "b" ? setAnswer("none") : setAnswer("b");
-          }}
-        >
-          <Span color={answer === "b" && "#246FB2"}>B.</Span>
-          Cavab 2
+        <li>
+          <label>
+            <input type="radio" name={`question${index}`} />
+            <Span>B.</Span>
+            Cavab 2
+          </label>
         </li>
-        <li
-          onClick={() => {
-            answer === "c" ? setAnswer("none") : setAnswer("c");
-          }}
-        >
-          <Span color={answer === "c" && "#246FB2"}>C.</Span>
-          Cavab 3
+        <li>
+          <label>
+            <input type="radio" name={`question${index}`} />
+            <Span>C.</Span>
+            Cavab 3
+          </label>
         </li>
       </ul>
     </>

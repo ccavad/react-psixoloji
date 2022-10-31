@@ -2,7 +2,7 @@ import React from "react";
 import styled from "styled-components";
 
 export const Btn = styled.button`
-  width: 280px;
+  max-width: 280px;
   box-shadow: 1px 3px 10px rgba(20, 179, 240, 12%);
   border: 0;
   background-color: white;
@@ -16,6 +16,10 @@ export const Btn = styled.button`
 
   &:hover {
     box-shadow: none;
+  }
+
+  @media (max-width: 364px) {
+    padding: 1rem 2rem;
   }
 `;
 
